@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.jaketv.jaketvapp.pulltorefresh.mad.PullToRefreshView xmlns:ptr="http://schemas.android.com/apk/res/com.sme.sme"
+        android:id="@+id/pull_refresh_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:listSelector="@color/transparent" />
+
+    <!-- Ad Layout -->
+    <RelativeLayout
+        android:id="@+id/ad_contatiner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ad_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

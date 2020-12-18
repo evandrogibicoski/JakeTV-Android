@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+repositories {
+    mavenCentral()
+}
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'jaketvalias'
+            keyPassword 'android'
+            //storeFile file('/Users/hirenkanani/workspace/JakeTV/keystore/jaketv_keystore.jks')
+            storeFile file('../keystore/jaketv_keystore.jks')
+            storePassword 'android'
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.jaketv.jaketvapp"
+        minSdkVersion 12
+        targetSdkVersion 23
+        versionCode 17
+        versionName "1.6.5"
+        signingConfig signingConfigs.config
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+    }
+
+    useLibrary 'org.apache.http.legacy'
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:support-v4:25.0.0'
+
+    compile 'com.google.android.gms:play-services-analytics:9.0.0'
+    compile 'com.google.android.gms:play-services-auth:9.0.0'
+
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.crittercism:crittercism-android-agent:5.0.6'
+    compile files('libs/universal-image-loader-1.9.2.jar')
+
+}
+
+

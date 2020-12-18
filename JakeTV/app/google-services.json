@@ -1,0 +1,51 @@
+{
+  "project_info": {
+    "project_number": "1036287325996",
+    "project_id": "firebase-jake-tv"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036287325996:android:a46281189eedaa22",
+        "android_client_info": {
+          "package_name": "com.jaketv.jaketvapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1036287325996-jgkm7m5u135ji8dcemgu7n3u9l6l07bp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jaketv.jaketvapp",
+            "certificate_hash": "B2F153B5487D89F8D36677294D83813B12140336"
+          }
+        },
+        {
+          "client_id": "1036287325996-mjih9qmdmv43c9tafd1t76c421nqjoo4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQEqRuMKgCWUuvpT-TjRhrWk9pixv94bI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-77750906-2"
+          }
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

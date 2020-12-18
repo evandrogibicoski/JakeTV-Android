@@ -1,0 +1,360 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Framelayout to display Fragments -->
+
+        <FrameLayout
+            android:id="@+id/frame_container1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/header">
+
+                <ImageButton
+                    android:id="@+id/imgLogo"
+                    android:layout_width="96dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/logo"
+                    android:visibility="visible" />
+
+                <com.jaketv.jaketvapp.util.RobotoRegularTextView
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:text="Settings"
+                    android:id="@+id/tvTitle"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:id="@+id/rlMenu"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:layout_width="23dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/menu"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSignOut"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone">
+
+                    <com.jaketv.jaketvapp.util.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="SignOut"
+                        android:textSize="17sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlCancel"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:text="Cancel"
+                        android:textSize="17sp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlMessage"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true">
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/message"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearch"
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/rlMessage">
+
+                    <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/search"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlSearchBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="80dp"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/gray_selected"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/search"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false" />
+
+                    <RelativeLayout
+                        android:id="@+id/rlClear"
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:visibility="gone">
+
+                        <ImageButton
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/icon_cancel"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false" />
+
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/etSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:background="@color/transparent"
+                        android:imeOptions="actionSearch"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:singleLine="true" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/gray_selected" />
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp" />
+
+            <ListView
+                android:id="@+id/lvSearchNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/transparent"
+                android:layout_marginTop="50dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/view_popupwindow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/overlay_color"
+                android:gravity="center"
+                android:padding="10dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/view_popupSignupMailChimp"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo" />
+
+                    <com.jaketv.jaketvapp.util.RobotoRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="Jake Home Delivery!"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                    <com.jaketv.jaketvapp.util.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:text="The best in Jewish video, delivered to your inbox weekly."
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_signmeup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/orange_color"
+                            android:text="Sure, sign me up!"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_nothanks"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@+id/btn_signmeup"
+                            android:backgroundTint="@color/skyblue_dark"
+                            android:text="No, thanks."
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btn_askmelater"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="6dp"
+                            android:layout_toRightOf="@+id/btn_nothanks"
+                            android:backgroundTint="@color/skyblue_dark"
+                            android:text="Ask me later?"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_popupSubscribed"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/shape"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="160dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/logo" />
+
+                    <com.jaketv.jaketvapp.util.RobotoRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:text="Great! You're subscribed to our best picks in Jewish Video.\n\nYou will find it in your Inbox, weekly."
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:textAlignment="center"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_dismiss"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:backgroundTint="@color/orange_color"
+                            android:text="Dismiss"
+                            android:textColor="@color/white"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+        <!-- Listview to display slider menu -->
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/menu_list_bg"
+            android:choiceMode="singleChoice"
+            android:listSelector="@color/transparent" />
+
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>
